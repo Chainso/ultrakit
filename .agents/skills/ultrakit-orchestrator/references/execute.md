@@ -128,6 +128,12 @@ The last phase(s) in the plan should address documentation. These go through the
 1. Evaluate whether developer documentation needs updating (architecture changes, contract changes, component boundary shifts, key design decisions)
 2. Evaluate whether user-facing documentation needs updating (behavior changes, new features, configuration changes)
 3. Apply changes using the writing standard from the plan contract
+4. Update `.ultrakit/notes.md` based on what was observed during execution:
+   - Correct any notes that contradict what was experienced
+   - Add new project-specific knowledge that would help future agents
+   - Preserve notes that were not contradicted — do not remove knowledge that is still valid
+   - Keep it concise and specific to this project
+   - If a note contradicts CLAUDE.md, flag it to the user rather than overriding
 
 Developer documentation describes architecture, contracts, and design rationale — NOT internal implementation details. The test: if this change is reverted, does the system's architecture or contract specification change? If no, developer docs do not need updating.
 
