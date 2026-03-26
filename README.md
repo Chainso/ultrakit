@@ -1,0 +1,89 @@
+# agent-harness
+
+A structured software delivery system for AI coding agents. Drop it into any project to get a discover → plan → execute pipeline with worker delegation, parallel code review, and documentation maintenance.
+
+## How It Works
+
+When you ask your coding agent to build something non-trivial, the harness orchestrator activates automatically and drives a three-stage pipeline:
+
+1. **Discover** — The orchestrator asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, and resolves all architectural decisions before any code is written. If ambiguity remains, it explores further recursively until every design question is answered.
+
+2. **Plan** — The orchestrator writes a detailed execution plan with all design decisions resolved and phase boundaries defined. Each phase is small enough for a single agent to complete. The plan is a checked-in markdown file — the single source of truth for what is happening and why.
+
+3. **Execute** — For each phase, the orchestrator spawns one powerful implementation agent, then launches parallel review agents (spec compliance, test quality, code quality, regression safety, integration coherence), then spawns a fix agent if needed. This execute-review-fix loop continues until reviews come back clean. The final phases address documentation.
+
+## What's Inside
+
+### Orchestrator Pipeline
+
+| Skill | Purpose |
+|-------|---------|
+| `harness-orchestrator` | Pipeline brain — drives discover → plan → execute |
+| `references/discover.md` | Socratic discovery with parallel exploration agents |
+| `references/plan.md` | Writes execution plans with all decisions resolved |
+| `references/execute.md` | Execute-review-fix loop per phase |
+
+### Worker Skills
+
+| Skill | Purpose |
+|-------|---------|
+| `harness-worker-implement` | Execute one phase from an execution plan |
+| `harness-worker-review` | Review one quality dimension of a completed phase |
+| `harness-worker-fix` | Apply targeted fixes based on review findings |
+| `harness-worker-resume` | Regather context after compaction or handoff |
+
+### Documentation Audit (Ad-Hoc)
+
+| Skill | Purpose |
+|-------|---------|
+| `harness-audit-docs` | Orchestrate a documentation accuracy audit |
+| `harness-audit-doc-worker` | Verify docs against code |
+| `harness-audit-code-worker` | Find undocumented code |
+| `harness-audit-doc-fixer` | Apply doc fixes |
+
+### Docs Scaffolding
+
+| Path | Purpose |
+|------|---------|
+| `docs/exec-plans/plan-contract.md` | What a valid execution plan must contain |
+| `docs/exec-plans/active/` | Plans currently in progress |
+| `docs/exec-plans/completed/` | Archived plans |
+| `docs/exec-plans/tech-debt-tracker.md` | Known gaps and deferred work |
+| `docs/product-specs/` | User-facing product specifications |
+| `docs/developer-docs/` | Internal architecture documentation |
+
+## How to Adopt
+
+1. Copy this repo's `.agents/skills/` and `docs/` directories into your project.
+2. Start a conversation with your coding agent and describe what you want to build. The `harness-orchestrator` skill triggers automatically for non-trivial work.
+
+That's it. No configuration files to fill in. The discovery phase explores your project and figures out the context it needs.
+
+### Optional: Add Project Context to CLAUDE.md
+
+If your project has a `CLAUDE.md` (or `AGENTS.md`), you can mention the harness:
+
+```markdown
+This project uses agent-harness for structured delivery.
+For non-trivial work, the `harness-orchestrator` skill activates automatically.
+Execution plans live in `docs/exec-plans/`.
+```
+
+This is optional — the skills auto-trigger based on their descriptions.
+
+## Philosophy
+
+- **All decisions before execution.** The orchestrator resolves every architectural question during discovery and planning. Workers implement — they do not design.
+- **The plan is the source of truth.** Not chat history, not memory, not external docs. If it matters, it is in the plan.
+- **Every phase gets reviewed.** Five quality dimensions, every time. Reviews are cheap and catch real problems.
+- **Documentation is architecture.** Developer docs describe system structure and contracts, not implementation details. User docs describe behavior, not internals.
+- **Plans survive interruption.** Any contributor — human or agent — can open the plan and continue from where work stopped.
+
+## Contributing
+
+Skills live in `.agents/skills/`. The plan contract lives in `docs/exec-plans/plan-contract.md`. To contribute:
+
+1. Fork the repository
+2. Make your changes
+3. Ensure skill descriptions accurately reflect skill behavior
+4. Submit a PR
