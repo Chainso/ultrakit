@@ -55,7 +55,6 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 | `.ultrakit/exec-plans/active/` | Plans currently in progress |
 | `.ultrakit/exec-plans/completed/` | Archived plans |
 | `.ultrakit/exec-plans/tech-debt-tracker.md` | Known gaps and deferred work |
-| `.ultrakit/product-specs/` | User-facing product specifications |
 | `.ultrakit/developer-docs/` | Internal architecture documentation |
 
 ## How to Adopt

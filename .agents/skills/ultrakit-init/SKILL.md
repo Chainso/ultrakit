@@ -2,7 +2,7 @@
 name: ultrakit:init
 description: >
   Initialize ultrakit in the current project. Creates the .ultrakit directory
-  with execution plans, product specs, and developer docs scaffolding. Run this
+  with execution plans and developer docs scaffolding. Run this
   once per project to set up the ultrakit structure.
 ---
 
