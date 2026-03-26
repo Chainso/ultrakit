@@ -33,7 +33,7 @@ Each stage has a reference file with detailed instructions. When you enter a sta
 
 Read the file `references/discover.md` (in the same directory as this skill) when entering this stage.
 
-Goal: Understand the problem deeply enough to make all architectural and design decisions. Use Socratic questioning with the user and parallel exploration agents to gather context. Resolve all ambiguity before moving to planning.
+Goal: Understand the problem deeply enough to make all product, architectural, and design decisions. Use Socratic questioning with the user and parallel exploration agents to gather context. Resolve all ambiguity — what to build, how it should behave, and how to build it — before moving to planning.
 
 ### Stage 2: Plan
 
@@ -68,7 +68,7 @@ The plan is the source of truth. Trust its Progress section over any chat memory
 
 ## Core Principles
 
-1. **All design decisions are made during planning, not execution.** Workers should never need to make architectural choices. If they do, the plan was not detailed enough.
+1. **All product and design decisions are made during discovery and planning, not execution.** Product choices (what to build, how it should behave) and architectural choices (how to build it) must be resolved before workers start. If workers need to make these decisions, the plan was not detailed enough.
 2. **The plan is the source of truth.** Not chat history, not memory, not external docs. If it matters for execution, it is in the plan.
 3. **Phases must fit in one agent context window.** If a phase is too large, split it before execution.
 4. **Serial execution by default.** One phase at a time. Parallel phases require explicit justification in the plan.

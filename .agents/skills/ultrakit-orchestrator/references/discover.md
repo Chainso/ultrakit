@@ -1,6 +1,6 @@
 # Discovery Stage
 
-You are in the discovery stage of the pipeline. Your goal is to understand the problem deeply enough to make all architectural and design decisions before writing a plan.
+You are in the discovery stage of the pipeline. Your goal is to understand the problem deeply enough to make all product, architectural, and design decisions before writing a plan.
 
 Do not write code. Do not create the execution plan yet. Focus entirely on understanding the problem.
 
@@ -17,16 +17,21 @@ Your job is to turn this into a fully understood problem with all key decisions 
 
 ## The Discovery Loop
 
-Discovery is a recursive process. Repeat until you have enough context to make all design decisions:
+Discovery is a recursive process. Repeat until you have enough context to make all product and design decisions:
 
 ### 1. Ask the User
 
 Use Socratic questioning to understand the problem. Ask about:
 
+**Product decisions** (what to build):
 - What behavior should exist after this work? What can someone do that they cannot do now?
 - Who are the users or consumers of this change?
-- Are there backward compatibility requirements?
+- How should the feature behave from the user's perspective? What are the edge cases?
+- Are there UX choices to make? What should the user see, click, or receive?
 - What does success look like? How would they verify it works?
+
+**Technical decisions** (how to build it):
+- Are there backward compatibility requirements?
 - Are there constraints on technology choices, patterns, or approaches?
 - What is the scope boundary? What is explicitly NOT included?
 
@@ -75,12 +80,13 @@ For remaining ambiguities:
 You are ready to plan when ALL of the following are true:
 
 - You can state what the system will do after this work that it does not do now
+- Product decisions are resolved: user-facing behavior, edge cases, UX choices
 - You know the backward compatibility requirements
 - You know which technologies, patterns, and approaches will be used
 - You know which files and modules will be affected
 - You know how to validate that the work is correct
 - You can define phase boundaries where each phase fits in one agent context window
-- There are no open architectural questions (implementation details can remain — those are for workers)
+- There are no open product or architectural questions (implementation details can remain — those are for workers)
 
 ## What Discovery Does NOT Produce
 
