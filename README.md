@@ -1,10 +1,10 @@
-# agent-harness
+# ultrakit
 
 A structured software delivery system for AI coding agents. Drop it into any project to get a discover → plan → execute pipeline with worker delegation, parallel code review, and documentation maintenance.
 
 ## How It Works
 
-When you ask your coding agent to build something non-trivial, the harness orchestrator activates automatically and drives a three-stage pipeline:
+When you ask your coding agent to build something non-trivial, the ultrakit orchestrator activates automatically and drives a three-stage pipeline:
 
 1. **Discover** — The orchestrator asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, and resolves all architectural decisions before any code is written. If ambiguity remains, it explores further recursively until every design question is answered.
 
@@ -18,7 +18,7 @@ When you ask your coding agent to build something non-trivial, the harness orche
 
 | Skill | Purpose |
 |-------|---------|
-| `harness-orchestrator` | Pipeline brain — drives discover → plan → execute |
+| `ultrakit-orchestrator` | Pipeline brain — drives discover → plan → execute |
 | `references/discover.md` | Socratic discovery with parallel exploration agents |
 | `references/plan.md` | Writes execution plans with all decisions resolved |
 | `references/execute.md` | Execute-review-fix loop per phase |
@@ -27,19 +27,19 @@ When you ask your coding agent to build something non-trivial, the harness orche
 
 | Skill | Purpose |
 |-------|---------|
-| `harness-worker-implement` | Execute one phase from an execution plan |
-| `harness-worker-review` | Review one quality dimension of a completed phase |
-| `harness-worker-fix` | Apply targeted fixes based on review findings |
-| `harness-worker-resume` | Regather context after compaction or handoff |
+| `ultrakit-worker-implement` | Execute one phase from an execution plan |
+| `ultrakit-worker-review` | Review one quality dimension of a completed phase |
+| `ultrakit-worker-fix` | Apply targeted fixes based on review findings |
+| `ultrakit-worker-resume` | Regather context after compaction or handoff |
 
 ### Documentation Audit (Ad-Hoc)
 
 | Skill | Purpose |
 |-------|---------|
-| `harness-audit-docs` | Orchestrate a documentation accuracy audit |
-| `harness-audit-doc-worker` | Verify docs against code |
-| `harness-audit-code-worker` | Find undocumented code |
-| `harness-audit-doc-fixer` | Apply doc fixes |
+| `ultrakit-audit-docs` | Orchestrate a documentation accuracy audit |
+| `ultrakit-audit-doc-worker` | Verify docs against code |
+| `ultrakit-audit-code-worker` | Find undocumented code |
+| `ultrakit-audit-doc-fixer` | Apply doc fixes |
 
 ### Docs Scaffolding
 
@@ -55,17 +55,17 @@ When you ask your coding agent to build something non-trivial, the harness orche
 ## How to Adopt
 
 1. Copy this repo's `.agents/skills/` and `docs/` directories into your project.
-2. Start a conversation with your coding agent and describe what you want to build. The `harness-orchestrator` skill triggers automatically for non-trivial work.
+2. Start a conversation with your coding agent and describe what you want to build. The `ultrakit-orchestrator` skill triggers automatically for non-trivial work.
 
 That's it. No configuration files to fill in. The discovery phase explores your project and figures out the context it needs.
 
 ### Optional: Add Project Context to CLAUDE.md
 
-If your project has a `CLAUDE.md` (or `AGENTS.md`), you can mention the harness:
+If your project has a `CLAUDE.md` (or `AGENTS.md`), you can mention ultrakit:
 
 ```markdown
-This project uses agent-harness for structured delivery.
-For non-trivial work, the `harness-orchestrator` skill activates automatically.
+This project uses ultrakit for structured delivery.
+For non-trivial work, the `ultrakit-orchestrator` skill activates automatically.
 Execution plans live in `docs/exec-plans/`.
 ```
 

@@ -1,5 +1,5 @@
 ---
-name: harness-worker-implement
+name: ultrakit-worker-implement
 description: >
   Execute one bounded phase from an existing execution plan. Do not use this skill
   to create plans, sequence phases, or decide cross-phase strategy. Use this when

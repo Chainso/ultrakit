@@ -1,5 +1,5 @@
 ---
-name: harness-audit-docs
+name: ultrakit-audit-docs
 description: >
   Audit and improve project documentation by dispatching parallel agents to verify
   accuracy and find coverage gaps. Runs ad-hoc or on a schedule — separate from the
@@ -9,7 +9,7 @@ description: >
 
 # Audit Docs
 
-Orchestrate a documentation audit by dispatching parallel agents in two directions: `harness-audit-doc-worker` agents verify docs against code (docs → code), and `harness-audit-code-worker` agents scan code for undocumented features (code → docs). Then dispatch `harness-audit-doc-fixer` agents to apply changes.
+Orchestrate a documentation audit by dispatching parallel agents in two directions: `ultrakit-audit-doc-worker` agents verify docs against code (docs → code), and `ultrakit-audit-code-worker` agents scan code for undocumented features (code → docs). Then dispatch `ultrakit-audit-doc-fixer` agents to apply changes.
 
 This skill is separate from the engineering delivery workflow. It runs ad-hoc or on a schedule to keep documentation current.
 
@@ -66,9 +66,9 @@ Create tasks for both audit directions:
 
 Run both directions in parallel:
 
-**Docs → code agents** (`harness-audit-doc-worker`): one per task. Each reads curated files first, then searches broadly.
+**Docs → code agents** (`ultrakit-audit-doc-worker`): one per task. Each reads curated files first, then searches broadly.
 
-**Code → docs agents** (`harness-audit-code-worker`): one per task. Each systematically inventories artifacts, then checks documentation coverage.
+**Code → docs agents** (`ultrakit-audit-code-worker`): one per task. Each systematically inventories artifacts, then checks documentation coverage.
 
 Use a fast, highly-capable model for all audit agents.
 
@@ -89,7 +89,7 @@ For structural recommendations, present to the user for approval before dispatch
 
 ### Step 5: Parallel Fix Agents
 
-One `harness-audit-doc-fixer` agent per doc (or group of related docs) that has findings. Each receives:
+One `ultrakit-audit-doc-fixer` agent per doc (or group of related docs) that has findings. Each receives:
 
 - Specific findings from both directions
 - Which documentation surface the doc belongs to
@@ -99,7 +99,7 @@ Fix agents gather their own deep context before writing. All run in parallel.
 
 ### Step 6: Verification Pass
 
-Spawn targeted `harness-audit-doc-worker` agents on changed docs to verify fixes. If verification reveals new issues, dispatch another fix agent and re-verify.
+Spawn targeted `ultrakit-audit-doc-worker` agents on changed docs to verify fixes. If verification reveals new issues, dispatch another fix agent and re-verify.
 
 ### Step 7: Commit
 

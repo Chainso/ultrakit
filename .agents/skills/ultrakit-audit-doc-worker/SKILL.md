@@ -1,16 +1,16 @@
 ---
-name: harness-audit-doc-worker
+name: ultrakit-audit-doc-worker
 description: >
   Verify documentation against actual code and other documentation surfaces. Do NOT
-  invoke this skill directly — it is used by agents spawned from the harness-audit-docs
-  orchestrator. If you need to audit documentation, use harness-audit-docs instead.
+  invoke this skill directly — it is used by agents spawned from the ultrakit-audit-docs
+  orchestrator. If you need to audit documentation, use ultrakit-audit-docs instead.
 ---
 
 # Audit Doc Worker
 
-You are a worker dispatched by the `harness-audit-docs` controller. Verify your assigned doc(s) and return structured findings.
+You are a worker dispatched by the `ultrakit-audit-docs` controller. Verify your assigned doc(s) and return structured findings.
 
-Do NOT invoke this skill directly. Use `harness-audit-docs` to orchestrate an audit.
+Do NOT invoke this skill directly. Use `ultrakit-audit-docs` to orchestrate an audit.
 
 ## Required Inputs
 

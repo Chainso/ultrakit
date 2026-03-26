@@ -30,7 +30,7 @@ If the handoff is missing fields, update the plan before spawning.
 
 ### Step 2: Spawn Implementation Agent
 
-Spawn one agent using the most capable model available. The agent should use the `harness-worker-implement` skill.
+Spawn one agent using the most capable model available. The agent should use the `ultrakit-worker-implement` skill.
 
 Include in the handoff prompt:
 
@@ -65,7 +65,7 @@ If the implementation agent reported a blocker, decide whether to:
 
 ### Step 4: Spawn Parallel Review Agents
 
-Launch review agents in parallel, one per quality dimension. Use a fast, highly-capable model. Each agent should use the `harness-worker-review` skill.
+Launch review agents in parallel, one per quality dimension. Use a fast, highly-capable model. Each agent should use the `ultrakit-worker-review` skill.
 
 The five standard review dimensions — always run all five:
 
@@ -99,7 +99,7 @@ If all reviews come back clean (no critical or important findings), the phase is
 
 ### Step 6: Spawn Fix Agent
 
-If there are critical or important findings, spawn one agent using the most capable model available. The agent should use the `harness-worker-fix` skill.
+If there are critical or important findings, spawn one agent using the most capable model available. The agent should use the `ultrakit-worker-fix` skill.
 
 Include in the fix prompt:
 
@@ -148,7 +148,7 @@ If a worker agent fails or is interrupted mid-phase:
 1. Check `git status` and `git log` to see what was already done.
 2. Check if the plan was updated (Progress, Phase Handoff).
 3. If partial work was committed, update the Phase Handoff with what remains.
-4. Spawn a new implementation agent with the updated handoff. The new agent should use the `harness-worker-resume` skill to regather context before continuing.
+4. Spawn a new implementation agent with the updated handoff. The new agent should use the `ultrakit-worker-resume` skill to regather context before continuing.
 
 ## Critical Principles
 

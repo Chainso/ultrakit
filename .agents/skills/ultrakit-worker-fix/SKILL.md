@@ -1,8 +1,8 @@
 ---
-name: harness-worker-fix
+name: ultrakit-worker-fix
 description: >
   Apply review findings to a completed execution phase. Do not use this skill directly —
-  it is used by fix agents spawned from the harness orchestrator when reviews identify
+  it is used by fix agents spawned from the ultrakit orchestrator when reviews identify
   critical or important issues. Makes minimal targeted fixes without expanding scope.
 ---
 

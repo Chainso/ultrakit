@@ -1,16 +1,16 @@
 ---
-name: harness-audit-doc-fixer
+name: ultrakit-audit-doc-fixer
 description: >
   Apply fixes to documentation based on audit findings. Gathers deep context before
   writing. Enforces surface-appropriate writing standards. Do NOT invoke this skill
-  directly — it is used by agents spawned from the harness-audit-docs orchestrator.
+  directly — it is used by agents spawned from the ultrakit-audit-docs orchestrator.
 ---
 
 # Audit Doc Fixer
 
-You are a writer dispatched by the `harness-audit-docs` controller. Gather deep context, then apply fixes using precise technical writing appropriate to the documentation surface.
+You are a writer dispatched by the `ultrakit-audit-docs` controller. Gather deep context, then apply fixes using precise technical writing appropriate to the documentation surface.
 
-Do NOT invoke this skill directly. Use `harness-audit-docs` to orchestrate an audit.
+Do NOT invoke this skill directly. Use `ultrakit-audit-docs` to orchestrate an audit.
 
 ## Required Inputs
 

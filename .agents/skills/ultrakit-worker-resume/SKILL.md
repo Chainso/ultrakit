@@ -1,5 +1,5 @@
 ---
-name: harness-worker-resume
+name: ultrakit-worker-resume
 description: >
   Regather context and continue work after context loss (compaction, session restart,
   or handoff from another agent). Use this skill when you are a worker agent resuming
@@ -65,7 +65,7 @@ From steps 1-4, determine:
 
 ### 6. Continue Implementation
 
-Continue with the normal implementation workflow from the `harness-worker-implement` skill. You now have enough context to pick up where the previous agent left off.
+Continue with the normal implementation workflow from the `ultrakit-worker-implement` skill. You now have enough context to pick up where the previous agent left off.
 
 If the phase handoff is outdated (e.g., expected files have changed, validation commands are different), update it as part of your work.
 
