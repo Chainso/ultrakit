@@ -1,5 +1,5 @@
 ---
-name: ultrakit-orchestrator
+name: ultrakit:orchestrator
 description: >
   Structured software delivery pipeline. Activates when the user wants to build,
   implement, or plan non-trivial work. Drives a discover → plan → execute pipeline

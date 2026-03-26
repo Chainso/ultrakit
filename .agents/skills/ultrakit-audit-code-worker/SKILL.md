@@ -1,16 +1,16 @@
 ---
-name: ultrakit-audit-code-worker
+name: ultrakit:audit:code-worker
 description: >
   Scan code to find undocumented features, commands, parameters, and behavior changes
   that should be covered in documentation. Do NOT invoke this skill directly — it is
-  used by agents spawned from the ultrakit-audit-docs orchestrator.
+  used by agents spawned from the ultrakit:audit:docs orchestrator.
 ---
 
 # Audit Code Worker
 
-You are a worker dispatched by the `ultrakit-audit-docs` controller. Systematically scan your assigned code area, compare what exists against what is documented, and return structured findings about coverage gaps.
+You are a worker dispatched by the `ultrakit:audit:docs` controller. Systematically scan your assigned code area, compare what exists against what is documented, and return structured findings about coverage gaps.
 
-Do NOT invoke this skill directly. Use `ultrakit-audit-docs` to orchestrate an audit.
+Do NOT invoke this skill directly. Use `ultrakit:audit:docs` to orchestrate an audit.
 
 ## Required Inputs
 

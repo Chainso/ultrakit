@@ -1,5 +1,5 @@
 ---
-name: ultrakit-worker-review
+name: ultrakit:worker:review
 description: >
   Review one quality dimension of a completed execution phase. Do not use this skill
   directly — it is used by review agents spawned from the ultrakit orchestrator after

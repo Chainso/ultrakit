@@ -18,7 +18,7 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 
 | Skill | Purpose |
 |-------|---------|
-| `ultrakit-orchestrator` | Pipeline brain — drives discover → plan → execute |
+| `ultrakit:orchestrator` | Pipeline brain — drives discover → plan → execute |
 | `references/discover.md` | Socratic discovery with parallel exploration agents |
 | `references/plan.md` | Writes execution plans with all decisions resolved |
 | `references/execute.md` | Execute-review-fix loop per phase |
@@ -27,19 +27,19 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 
 | Skill | Purpose |
 |-------|---------|
-| `ultrakit-worker-implement` | Execute one phase from an execution plan |
-| `ultrakit-worker-review` | Review one quality dimension of a completed phase |
-| `ultrakit-worker-fix` | Apply targeted fixes based on review findings |
-| `ultrakit-worker-resume` | Regather context after compaction or handoff |
+| `ultrakit:worker:implement` | Execute one phase from an execution plan |
+| `ultrakit:worker:review` | Review one quality dimension of a completed phase |
+| `ultrakit:worker:fix` | Apply targeted fixes based on review findings |
+| `ultrakit:worker:resume` | Regather context after compaction or handoff |
 
 ### Documentation Audit (Ad-Hoc)
 
 | Skill | Purpose |
 |-------|---------|
-| `ultrakit-audit-docs` | Orchestrate a documentation accuracy audit |
-| `ultrakit-audit-doc-worker` | Verify docs against code |
-| `ultrakit-audit-code-worker` | Find undocumented code |
-| `ultrakit-audit-doc-fixer` | Apply doc fixes |
+| `ultrakit:audit:docs` | Orchestrate a documentation accuracy audit |
+| `ultrakit:audit:doc-worker` | Verify docs against code |
+| `ultrakit:audit:code-worker` | Find undocumented code |
+| `ultrakit:audit:doc-fixer` | Apply doc fixes |
 
 ### Docs Scaffolding
 
@@ -55,7 +55,7 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 ## How to Adopt
 
 1. Copy this repo's `.agents/skills/` and `docs/` directories into your project.
-2. Start a conversation with your coding agent and describe what you want to build. The `ultrakit-orchestrator` skill triggers automatically for non-trivial work.
+2. Start a conversation with your coding agent and describe what you want to build. The `ultrakit:orchestrator` skill triggers automatically for non-trivial work.
 
 That's it. No configuration files to fill in. The discovery phase explores your project and figures out the context it needs.
 
@@ -65,7 +65,7 @@ If your project has a `CLAUDE.md` (or `AGENTS.md`), you can mention ultrakit:
 
 ```markdown
 This project uses ultrakit for structured delivery.
-For non-trivial work, the `ultrakit-orchestrator` skill activates automatically.
+For non-trivial work, the `ultrakit:orchestrator` skill activates automatically.
 Execution plans live in `docs/exec-plans/`.
 ```
 

@@ -1,5 +1,5 @@
 ---
-name: ultrakit-worker-fix
+name: ultrakit:worker:fix
 description: >
   Apply review findings to a completed execution phase. Do not use this skill directly —
   it is used by fix agents spawned from the ultrakit orchestrator when reviews identify
