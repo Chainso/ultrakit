@@ -4,13 +4,13 @@ You are in the planning stage of the pipeline. Discovery is complete. You have r
 
 ## Read First
 
-Read `docs/exec-plans/plan-contract.md` before writing the plan. It defines the required sections, maintenance rules, and quality bar. This reference file describes how you write the plan; the plan contract describes what the plan must contain.
+Read `.ultrakit/exec-plans/plan-contract.md` before writing the plan. It defines the required sections, maintenance rules, and quality bar. This reference file describes how you write the plan; the plan contract describes what the plan must contain.
 
 ## Creating the Plan
 
 ### 1. Choose a Filename
 
-Use a descriptive kebab-case name: `docs/exec-plans/active/<feature-name>.md`
+Use a descriptive kebab-case name: `.ultrakit/exec-plans/active/<feature-name>.md`
 
 ### 2. Write the Required Sections
 
@@ -68,7 +68,7 @@ Before execution begins, run the project's broad test/lint/build commands once. 
 
 ### 6. Register the Plan
 
-Update `docs/exec-plans/active/index.md` to include the new plan.
+Update `.ultrakit/exec-plans/active/index.md` to include the new plan.
 
 ## Present to the User
 

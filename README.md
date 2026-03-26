@@ -41,35 +41,30 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 | `ultrakit:audit:code-worker` | Find undocumented code |
 | `ultrakit:audit:doc-fixer` | Apply doc fixes |
 
-### Docs Scaffolding
+### Setup
+
+| Skill | Purpose |
+|-------|---------|
+| `ultrakit:init` | Initialize `.ultrakit/` directory in your project |
+
+### Project Structure (created by init)
 
 | Path | Purpose |
 |------|---------|
-| `docs/exec-plans/plan-contract.md` | What a valid execution plan must contain |
-| `docs/exec-plans/active/` | Plans currently in progress |
-| `docs/exec-plans/completed/` | Archived plans |
-| `docs/exec-plans/tech-debt-tracker.md` | Known gaps and deferred work |
-| `docs/product-specs/` | User-facing product specifications |
-| `docs/developer-docs/` | Internal architecture documentation |
+| `.ultrakit/exec-plans/plan-contract.md` | What a valid execution plan must contain |
+| `.ultrakit/exec-plans/active/` | Plans currently in progress |
+| `.ultrakit/exec-plans/completed/` | Archived plans |
+| `.ultrakit/exec-plans/tech-debt-tracker.md` | Known gaps and deferred work |
+| `.ultrakit/product-specs/` | User-facing product specifications |
+| `.ultrakit/developer-docs/` | Internal architecture documentation |
 
 ## How to Adopt
 
-1. Copy this repo's `.agents/skills/` and `docs/` directories into your project.
-2. Start a conversation with your coding agent and describe what you want to build. The `ultrakit:orchestrator` skill triggers automatically for non-trivial work.
+1. Copy `.agents/skills/ultrakit-*/` into your project's `.agents/skills/` directory.
+2. Run `ultrakit:init` (or `bash .agents/skills/ultrakit-init/init.sh`) to create the `.ultrakit/` directory.
+3. Start a conversation with your coding agent and describe what you want to build. The `ultrakit:orchestrator` skill triggers automatically for non-trivial work.
 
 That's it. No configuration files to fill in. The discovery phase explores your project and figures out the context it needs.
-
-### Optional: Add Project Context to CLAUDE.md
-
-If your project has a `CLAUDE.md` (or `AGENTS.md`), you can mention ultrakit:
-
-```markdown
-This project uses ultrakit for structured delivery.
-For non-trivial work, the `ultrakit:orchestrator` skill activates automatically.
-Execution plans live in `docs/exec-plans/`.
-```
-
-This is optional — the skills auto-trigger based on their descriptions.
 
 ## Philosophy
 
@@ -81,7 +76,7 @@ This is optional — the skills auto-trigger based on their descriptions.
 
 ## Contributing
 
-Skills live in `.agents/skills/`. The plan contract lives in `docs/exec-plans/plan-contract.md`. To contribute:
+Skills live in `.agents/skills/`. The plan contract lives in `.agents/skills/ultrakit-init/scaffold/exec-plans/plan-contract.md`. To contribute:
 
 1. Fork the repository
 2. Make your changes

@@ -58,7 +58,7 @@ When spawning agents, use the appropriate capability tier:
 
 If you have no memory of prior work in this session:
 
-1. Read `docs/exec-plans/active/index.md` to find the current plan.
+1. Read `.ultrakit/exec-plans/active/index.md` to find the current plan.
 2. If there is an active plan, spawn a subagent to read its `Progress` section and Phase Handoff statuses. The subagent should return: which stage the pipeline is in (discovery, planning, or execution), which phase is current, and what the plan's overall objective is.
 3. If in discovery (no plan yet), load `references/discover.md` and continue the conversation with the user.
 4. If in planning (plan exists but incomplete), load `references/plan.md` and review the plan state.
@@ -76,4 +76,4 @@ The plan is the source of truth. Trust its Progress section over any chat memory
 
 ## Plan Contract
 
-The plan contract at `docs/exec-plans/plan-contract.md` defines what a valid execution plan must contain and how it must be maintained. Read it before creating or revising any plan.
+The plan contract at `.ultrakit/exec-plans/plan-contract.md` defines what a valid execution plan must contain and how it must be maintained. Read it before creating or revising any plan.

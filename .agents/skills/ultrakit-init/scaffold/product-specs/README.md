@@ -8,7 +8,7 @@ A spec describes **what behavior exists or should exist** from the perspective o
 
 1. A spec that is `completed` describes delivered, ratified behavior.
 2. A spec that is `draft` captures intended product behavior not yet fully implemented.
-3. When a draft spec enters active delivery, the tracking home is the relevant execution plan under `docs/exec-plans/active/`, not the spec itself.
+3. When a draft spec enters active delivery, the tracking home is the relevant execution plan under `.ultrakit/exec-plans/active/`, not the spec itself.
 4. Link specs to execution plans where implementation is in progress.
 5. Keep specs focused on observable behavior and acceptance criteria. Avoid implementation detail unless it is truly user-visible.
 

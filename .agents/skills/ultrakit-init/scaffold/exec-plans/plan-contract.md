@@ -8,7 +8,7 @@ The orchestrator skill reads this contract before creating or revising any plan.
 
 An execution plan is a checked-in markdown document that lets a contributor deliver a multi-step change from the current working tree with minimal outside context. A good plan explains why the work matters, what files and commands are involved, how to prove the result works, and how another contributor can safely resume if work stops midway.
 
-Plans live under `docs/exec-plans/active/` while work is in progress and move to `docs/exec-plans/completed/` when acceptance is met and recorded.
+Plans live under `.ultrakit/exec-plans/active/` while work is in progress and move to `.ultrakit/exec-plans/completed/` when acceptance is met and recorded.
 
 ## Non-Negotiable Requirements
 
@@ -30,17 +30,17 @@ The orchestrator is responsible for sizing phases correctly during planning. If 
 
 ## Repository Workflow
 
-When work is multi-step or spans more than one tightly related edit, create or update a plan under `docs/exec-plans/active/` before making substantial changes.
+When work is multi-step or spans more than one tightly related edit, create or update a plan under `.ultrakit/exec-plans/active/` before making substantial changes.
 
 The default lifecycle is:
 
-1. Create or update an active plan in `docs/exec-plans/active/`.
-2. Update `docs/exec-plans/active/index.md` so the active plan is discoverable.
+1. Create or update an active plan in `.ultrakit/exec-plans/active/`.
+2. Update `.ultrakit/exec-plans/active/index.md` so the active plan is discoverable.
 3. Execute one phase at a time unless the plan explicitly authorizes safe parallel work with disjoint scope.
 4. Keep the plan current while the work proceeds.
-5. When acceptance is met, move the plan to `docs/exec-plans/completed/`.
+5. When acceptance is met, move the plan to `.ultrakit/exec-plans/completed/`.
 6. Update indexes and any references that still point at the active-path location.
-7. Record intentionally deferred work in `docs/exec-plans/tech-debt-tracker.md` when appropriate.
+7. Record intentionally deferred work in `.ultrakit/exec-plans/tech-debt-tracker.md` when appropriate.
 
 ## Required Sections
 
@@ -204,12 +204,12 @@ Developer documentation describes architecture, contracts, and design rationale 
 
 ## Archive Requirements
 
-Before moving a plan from `docs/exec-plans/active/` to `docs/exec-plans/completed/`, confirm all of the following:
+Before moving a plan from `.ultrakit/exec-plans/active/` to `.ultrakit/exec-plans/completed/`, confirm all of the following:
 
 1. acceptance has been met or any remaining gap is explicitly documented,
 2. the living sections reflect the final state,
-3. `docs/exec-plans/active/index.md` no longer presents the plan as active,
-4. `docs/exec-plans/completed/README.md` or another relevant completed-plan index includes the archived file,
+3. `.ultrakit/exec-plans/active/index.md` no longer presents the plan as active,
+4. `.ultrakit/exec-plans/completed/README.md` or another relevant completed-plan index includes the archived file,
 5. references to the active-path location are updated if the completed path matters.
 
 ## Minimal Quality Bar

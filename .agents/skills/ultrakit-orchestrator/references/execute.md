@@ -135,10 +135,10 @@ Developer documentation describes architecture, contracts, and design rationale 
 
 When all phases are complete:
 
-1. Move the plan from `docs/exec-plans/active/` to `docs/exec-plans/completed/`.
-2. Update `docs/exec-plans/active/index.md` to remove it.
-3. Update `docs/exec-plans/completed/README.md` to include it.
-4. Record any deferred work in `docs/exec-plans/tech-debt-tracker.md`.
+1. Move the plan from `.ultrakit/exec-plans/active/` to `.ultrakit/exec-plans/completed/`.
+2. Update `.ultrakit/exec-plans/active/index.md` to remove it.
+3. Update `.ultrakit/exec-plans/completed/README.md` to include it.
+4. Record any deferred work in `.ultrakit/exec-plans/tech-debt-tracker.md`.
 5. Inform the user that the work is complete.
 
 ## Handling Interruptions
