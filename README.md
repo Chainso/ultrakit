@@ -4,13 +4,15 @@ A structured software delivery system for AI coding agents. Drop it into any pro
 
 ## How It Works
 
-When you ask your coding agent to build something non-trivial, the ultrakit orchestrator activates automatically and drives a three-stage pipeline:
+When you ask your coding agent to build something non-trivial, the ultrakit orchestrator activates automatically and routes work through four skills:
 
-1. **Discover** — The orchestrator asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, reads `.ultrakit/notes.md` for durable project and user preferences, and resolves all architectural decisions before any code is written. If ambiguity remains, it explores further recursively until every design question is answered.
+1. **Orchestrate** — `ultrakit:orchestrator:orchestrate` chooses whether the work should enter discovery, planning, or execution based on the current repository state and the user request.
 
-2. **Plan** — The orchestrator writes a detailed execution plan with all design decisions resolved and phase boundaries defined. Each phase is small enough for a single agent to complete. The plan is a checked-in markdown file — the single source of truth for what is happening and why.
+2. **Discover** — `ultrakit:orchestrator:discover` asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, reads `.ultrakit/notes.md` for durable project and user preferences, and resolves all architectural decisions before any plan is written.
 
-3. **Execute** — For each phase, the orchestrator spawns one powerful implementation agent, then launches parallel review agents (spec compliance, test quality, code quality, regression safety, integration coherence), then spawns a fix agent if needed. This execute-review-fix loop continues until reviews come back clean. The final phases address documentation.
+3. **Plan** — `ultrakit:orchestrator:plan` writes a detailed execution plan with all design decisions resolved and phase boundaries defined. Each phase is small enough for a single agent to complete. The plan is a checked-in markdown file — the single source of truth for what is happening and why.
+
+4. **Execute** — `ultrakit:orchestrator:execute` spawns one powerful implementation agent per phase, then parallel review agents (spec compliance, test quality, code quality, regression safety, integration coherence), then a fix agent if needed. This execute-review-fix loop continues until reviews come back clean. The final phases address documentation.
 
 ## What's Inside
 
@@ -18,10 +20,10 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 
 | Skill | Purpose |
 |-------|---------|
-| `ultrakit:orchestrator` | Pipeline brain — drives discover → plan → execute |
-| `references/discover.md` | Socratic discovery with parallel exploration agents |
-| `references/plan.md` | Writes execution plans with all decisions resolved |
-| `references/execute.md` | Execute-review-fix loop per phase |
+| `ultrakit:orchestrator:orchestrate` | Entry point — routes work into discovery, planning, or execution |
+| `ultrakit:orchestrator:discover` | Socratic discovery with parallel exploration agents |
+| `ultrakit:orchestrator:plan` | Writes execution plans with all decisions resolved |
+| `ultrakit:orchestrator:execute` | Execute-review-fix loop per phase |
 
 ### Worker Skills
 
@@ -62,7 +64,7 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 
 1. Copy `.agents/skills/ultrakit-*/` into your project's `.agents/skills/` directory.
 2. Run `ultrakit:init` (or `bash .agents/skills/ultrakit-init/init.sh`) to create the `.ultrakit/` directory.
-3. Start a conversation with your coding agent and describe what you want to build. The `ultrakit:orchestrator` skill triggers automatically for non-trivial work.
+3. Start a conversation with your coding agent and describe what you want to build. The `ultrakit:orchestrator:orchestrate` skill triggers automatically for non-trivial work.
 
 That's it. No configuration files to fill in. The discovery phase explores your project and figures out the context it needs.
 

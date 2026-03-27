@@ -1,3 +1,10 @@
+---
+name: ultrakit:orchestrator:execute
+description: >
+  Execution stage for ultrakit. Runs one plan phase at a time through the
+  execute-review-fix loop until the plan is complete and archived.
+---
+
 # Execution Stage
 
 You are in the execution stage of the pipeline. The plan is written and approved. Now execute it phase by phase using the execute-review-fix loop.

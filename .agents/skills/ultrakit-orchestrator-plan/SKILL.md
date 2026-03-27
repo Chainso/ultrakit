@@ -1,12 +1,21 @@
+---
+name: ultrakit:orchestrator:plan
+description: >
+  Planning stage for ultrakit. Writes the execution plan after discovery is complete
+  and prepares the work for execution approval.
+---
+
 # Planning Stage
 
 You are in the planning stage of the pipeline. Discovery is complete. You have resolved all architectural and design decisions. Now write the execution plan.
 
+Do not write implementation code during this stage.
+
 ## Read First
 
-Read `.ultrakit/exec-plans/plan-contract.md` before writing the plan. It defines the required sections, maintenance rules, and quality bar. This reference file describes how you write the plan; the plan contract describes what the plan must contain.
-
 Read `.ultrakit/notes.md` before drafting the plan. Use it for durable project or user preferences, not task-state.
+
+Read `.ultrakit/exec-plans/plan-contract.md` before writing the plan. It defines the required sections, maintenance rules, and quality bar.
 
 ## Creating the Plan
 
@@ -66,7 +75,7 @@ Make handoffs prescriptive. The worker should be able to execute from the handof
 
 ### 5. Run a Baseline
 
-Before execution begins, run the project's broad test/lint/build commands once. Record known pre-existing failures in the plan so workers can distinguish regressions from baseline noise.
+Before execution begins, run the project's broad test, lint, and build commands once. Record known pre-existing failures in the plan so workers can distinguish regressions from baseline noise.
 
 ### 6. Register the Plan
 
@@ -86,4 +95,4 @@ Get explicit approval before moving to execution. The user should understand wha
 
 ## Transition to Execution
 
-Once the user approves the plan, load `references/execute.md` and begin the execute-review-fix loop.
+Once the user approves the plan, use `ultrakit:orchestrator:execute` and begin the execute-review-fix loop.

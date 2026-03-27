@@ -1,3 +1,10 @@
+---
+name: ultrakit:orchestrator:discover
+description: >
+  Discovery stage for ultrakit. Resolves product, architectural, and validation
+  decisions before planning begins.
+---
+
 # Discovery Stage
 
 You are in the discovery stage of the pipeline. Your goal is to understand the problem deeply enough to make all product, architectural, and design decisions before writing a plan.
@@ -98,4 +105,4 @@ The one exception: if the user provided a vague idea and discovery refined it in
 
 ## Transition to Planning
 
-When discovery is complete, tell the user what you have learned and what decisions you have made. Then load `references/plan.md` and begin writing the execution plan.
+When discovery is complete, tell the user what you have learned and what decisions you have made. Then use `ultrakit:orchestrator:plan` to write the execution plan.
