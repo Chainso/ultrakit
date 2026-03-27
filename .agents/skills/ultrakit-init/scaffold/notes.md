@@ -7,5 +7,6 @@ These notes help future agents work effectively without rediscovering project-sp
 ## Guidelines
 
 - Only record knowledge specific to THIS project that could not be known without working in it
-- `AGENTS.md` or `CLAUDE.md` takes precedence — if a note contradicts either file, flag it to the user instead
+- `AGENTS.md` takes precedence over `CLAUDE.md`; in many repos they are the same file or symlinked
+- If a note contradicts either file, flag it to the user instead
 - Keep concise — this should read as a tight cheat sheet, not a journal
