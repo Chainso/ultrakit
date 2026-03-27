@@ -23,6 +23,8 @@ The orchestrator provides:
 
 ### 1. Understand the Findings
 
+Read `.ultrakit/notes.md` first for durable project or user preferences.
+
 Read each finding carefully. Understand what the reviewer observed, where the issue is, and what the expected behavior should be.
 
 ### 2. Read the Code

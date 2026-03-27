@@ -6,6 +6,8 @@ You are in the planning stage of the pipeline. Discovery is complete. You have r
 
 Read `.ultrakit/exec-plans/plan-contract.md` before writing the plan. It defines the required sections, maintenance rules, and quality bar. This reference file describes how you write the plan; the plan contract describes what the plan must contain.
 
+Read `.ultrakit/notes.md` before drafting the plan. Use it for durable project or user preferences, not task-state.
+
 ## Creating the Plan
 
 ### 1. Choose a Filename

@@ -6,7 +6,7 @@ A structured software delivery system for AI coding agents. Drop it into any pro
 
 When you ask your coding agent to build something non-trivial, the ultrakit orchestrator activates automatically and drives a three-stage pipeline:
 
-1. **Discover** — The orchestrator asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, and resolves all architectural decisions before any code is written. If ambiguity remains, it explores further recursively until every design question is answered.
+1. **Discover** — The orchestrator asks Socratic questions and launches parallel exploration agents to understand the problem. It gathers codebase context, reads documentation, reads `.ultrakit/notes.md` for durable project and user preferences, and resolves all architectural decisions before any code is written. If ambiguity remains, it explores further recursively until every design question is answered.
 
 2. **Plan** — The orchestrator writes a detailed execution plan with all design decisions resolved and phase boundaries defined. Each phase is small enough for a single agent to complete. The plan is a checked-in markdown file — the single source of truth for what is happening and why.
 
@@ -55,6 +55,7 @@ When you ask your coding agent to build something non-trivial, the ultrakit orch
 | `.ultrakit/exec-plans/active/` | Plans currently in progress |
 | `.ultrakit/exec-plans/completed/` | Archived plans |
 | `.ultrakit/exec-plans/tech-debt-tracker.md` | Known gaps and deferred work |
+| `.ultrakit/notes.md` | Lightweight cross-session project and user preferences for non-audit agents |
 | `.ultrakit/developer-docs/` | Internal architecture documentation |
 
 ## How to Adopt
@@ -69,6 +70,7 @@ That's it. No configuration files to fill in. The discovery phase explores your 
 
 - **All decisions before execution.** The orchestrator resolves every architectural question during discovery and planning. Workers implement — they do not design.
 - **The plan is the source of truth.** Not chat history, not memory, not external docs. If it matters, it is in the plan.
+- **Notes capture durable preferences.** `.ultrakit/notes.md` is for lightweight cross-session project and user preferences, not execution state.
 - **Every phase gets reviewed.** Five quality dimensions, every time. Reviews are cheap and catch real problems.
 - **Documentation is architecture.** Developer docs describe system structure and contracts, not implementation details. User docs describe behavior, not internals.
 - **Plans survive interruption.** Any contributor — human or agent — can open the plan and continue from where work stopped.

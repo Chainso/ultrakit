@@ -37,7 +37,7 @@ Use Socratic questioning to understand the problem. Ask about:
 
 Do not ask all questions at once. Start with the most important unknowns and iterate.
 
-Before launching exploration, read `.ultrakit/notes.md` if it exists. These are agent-written observations from prior executions about effective working patterns in this project.
+Before launching exploration, read `.ultrakit/notes.md`. These are agent-written observations about effective working patterns and durable project or user preferences for this project.
 
 ### 2. Parallel Exploration
 

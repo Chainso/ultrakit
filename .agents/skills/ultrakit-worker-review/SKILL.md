@@ -81,6 +81,8 @@ Check whether the phase's output integrates cleanly with the existing codebase.
 
 ### 1. Understand the Spec
 
+Read `.ultrakit/notes.md` first for durable project or user preferences.
+
 Read the phase's `Phase Handoff` subsection carefully. Understand what was supposed to happen, what files were expected to change, and what the deliverables are.
 
 ### 2. Read the Changes

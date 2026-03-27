@@ -58,11 +58,12 @@ When spawning agents, use the appropriate capability tier:
 
 If you have no memory of prior work in this session:
 
-1. Read `.ultrakit/exec-plans/active/index.md` to find the current plan.
-2. If there is an active plan, spawn a subagent to read its `Progress` section and Phase Handoff statuses. The subagent should return: which stage the pipeline is in (discovery, planning, or execution), which phase is current, and what the plan's overall objective is.
-3. If in discovery (no plan yet), load `references/discover.md` and continue the conversation with the user.
-4. If in planning (plan exists but incomplete), load `references/plan.md` and review the plan state.
-5. If in execution, load `references/execute.md` and identify the current phase from Phase Handoff statuses. Spawn exploration agents on the implementation repos to rebuild situational awareness before resuming.
+1. Read `.ultrakit/notes.md`.
+2. Read `.ultrakit/exec-plans/active/index.md` to find the current plan.
+3. If there is an active plan, spawn a subagent to read its `Progress` section and Phase Handoff statuses. The subagent should return: which stage the pipeline is in (discovery, planning, or execution), which phase is current, and what the plan's overall objective is.
+4. If in discovery (no plan yet), load `references/discover.md` and continue the conversation with the user.
+5. If in planning (plan exists but incomplete), load `references/plan.md` and review the plan state.
+6. If in execution, load `references/execute.md` and identify the current phase from Phase Handoff statuses. Spawn exploration agents on the implementation repos to rebuild situational awareness before resuming.
 
 The plan is the source of truth. Trust its Progress section over any chat memory.
 

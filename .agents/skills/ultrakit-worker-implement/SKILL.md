@@ -30,6 +30,8 @@ If any of these are missing, infer the smallest safe assumption and continue unl
 
 ### 1. Gather Context
 
+Read `.ultrakit/notes.md` first for durable project or user preferences.
+
 Read your assigned phase's `Phase Handoff` subsection in full. Then read the previous phase's `Phase Handoff` for continuity.
 
 Spawn a subagent to read the full execution plan and return a focused context summary. The subagent should return:

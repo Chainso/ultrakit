@@ -20,6 +20,8 @@ You are a worker agent resuming a phase that was started but not completed. A pr
 
 ### 1. Read the Plan
 
+Read `.ultrakit/notes.md` first for durable project or user preferences.
+
 Read the execution plan's `Phase Handoff` subsection for your assigned phase. Look for:
 
 - **Status**: Is it marked in-progress? Partially complete?
